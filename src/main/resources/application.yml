@@ -1,0 +1,13 @@
+server:
+  port: 9408
+
+spring:
+  application:
+    name: apache-kafka-consumer
+  cloud:
+    stream:
+      bindings:
+        downloadProducerEvent-in-0:
+          destination: producerEvent
+          content-type: application/json
+          group: consumerService
